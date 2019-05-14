@@ -35,26 +35,26 @@ class SpaceXStore {
     }, {
         Header: 'Launch Success?',
         accessor: 'launch_success',
-        Cell: (row) => (            
+        Cell: (row) => (
             row.original.launch_success !== null ? row.original.launch_success.toString() : ""
         ),
     }]
 
     public async init() {
-    autorun(() => {
-        this.getLaunches();
-    })
-}
+        autorun(() => {
+            this.getLaunches();
+        })
+    }
 
-@action
-public async changeCurrentLaunch(number: number){
-    number = number--;
-    return this.allLaunches[number];
-}
+    @action
+    public async changeCurrentLaunch(number: number) {
+        number = number--;
+        return this.allLaunches[number];
+    }
 
-@action
-public async getLaunches() {
-    this.allLaunches = (await Api.getAllLaunches());
+    @action
+    public async getLaunches() {
+        this.allLaunches = (await Api.getAllLaunches());
     }
 }
 

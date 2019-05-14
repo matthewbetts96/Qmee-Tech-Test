@@ -19,7 +19,6 @@ class Links extends React.Component<ILinks> {
     }
 
     _onReady(event) {
-        // access to player in all event handlers via event.target
         event.target.pauseVideo();
     }
 

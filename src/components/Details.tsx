@@ -46,11 +46,11 @@ class Details extends React.Component<IDetails> {
                             <u>Launch Year</u> <p>{currentLaunch.launch_year}</p>
                         </div>
                         <div className="box">
-                            <u>Upcoming?</u> 
-                                {currentLaunch.upcoming.toString() === "true" 
-                                    ? <p>Yes</p>
-                                    : <p>No</p>
-                                }
+                            <u>Upcoming?</u>
+                            {currentLaunch.upcoming.toString() === "true"
+                                ? <p>Yes</p>
+                                : <p>No</p>
+                            }
                         </div>
                     </div>
                     <div>

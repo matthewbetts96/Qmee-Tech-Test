@@ -1,9 +1,9 @@
 import SpaceXStore from "./SpaceXStore";
 
 export class Root {
-    public SpaceXStore:any = new SpaceXStore(this);
+    public SpaceXStore: any = new SpaceXStore(this);
 
-    constructor(){
+    constructor() {
         Object.keys(this).forEach(storeName => this[storeName].init && this[storeName].init())
     }
 }

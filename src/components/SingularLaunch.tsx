@@ -23,15 +23,15 @@ class ISingularLaunch extends React.Component<any, ISingularLaunch> {
 	render() {
 		return (
 			<>
-			<div className={this.props.className}>
-				{this.injected.SpaceXStore.allLaunches ?
-					<div className="launchDetails">
-						<Details launch={this.props.launch}/>
-						<div className = "filler"/>
-						<Links launch={this.props.launch}/>
-					</div>
-					: "Loading...."}
-			 </div>
+				<div className={this.props.className}>
+					{this.injected.SpaceXStore.allLaunches ?
+						<div className="launchDetails">
+							<Details launch={this.props.launch} />
+							<div className="filler" />
+							<Links launch={this.props.launch} />
+						</div>
+						: "Loading...."}
+				</div>
 			</>
 		)
 	}

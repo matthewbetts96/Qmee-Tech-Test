@@ -26,7 +26,7 @@ class LaunchTable extends React.Component<ILaunchTable> {
                         <ReactTable
                             data={this.injected.SpaceXStore.allLaunches}
                             columns={this.injected.SpaceXStore.columns}
-                            defaultPageSize= {25}
+                            defaultPageSize={25}
                             getTrProps={(s, row) => {
                                 let selected;
                                 if (row === undefined) {
@@ -43,7 +43,7 @@ class LaunchTable extends React.Component<ILaunchTable> {
                             SubComponent={row => {
                                 return (
                                     <div>
-                                        <SingularLaunch launch={row}/>
+                                        <SingularLaunch launch={row} />
                                     </div>
                                 )
                             }}
